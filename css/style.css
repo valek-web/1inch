@@ -389,7 +389,8 @@
   max-width: 1160px;
   min-height: 178px;
   padding: 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   gap: 100px;
   border-radius: 40px 40px 0 0;
@@ -551,9 +552,8 @@
 
 .criteria-menu__element-active {
   color: #fbfbfb;
-    border-bottom-color: #2f8af5;
+  border-bottom-color: #2f8af5;
 }
-
 
 /*** fusion ***/
 
@@ -562,8 +562,50 @@
 }
 
 .fusion__wrapper {
-  background: url(./../img/news-block-background.webp) center/ 100% 100% no-repeat;
+  background: url(./../img/news-block-background.webp) center/ 100% 100%
+    no-repeat;
   min-height: 400px;
   padding: 80px 60px;
   border-radius: 20px;
+}
+
+.fusion__title {
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 63px;
+}
+
+.fusion__desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  white-space: pre-line;
+  max-width: 415px;
+  margin-top: 16px;
+}
+
+.fusion .button {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px 8px 20px;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background: radial-gradient(
+    63.89% 180.95% at 15.94% 154.76%,
+    #16979f 0%,
+    rgba(22, 151, 159, 0) 100%
+  );
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.fusion .button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
